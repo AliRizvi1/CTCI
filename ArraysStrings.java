@@ -17,4 +17,20 @@ public class ArraysStrings {
         return true;
     }
 
+    //Question 1.2: two strings, write a method to decide if one is a permutation of the other
+    String sort(String s) {
+        char[] content = s.toCharArray();
+        java.util.Arrays.sort(content);
+        return new String(content);
+    }
+
+    boolean permutation(String str1, String str2) {
+        if (str1.length() != str2.length()) return false;
+        sort(str1);
+        sort(str2);
+        return (sort(str1).equals(sort(str2)));
+
+
+    }
+
 }
