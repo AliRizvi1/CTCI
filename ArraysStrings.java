@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Stack;
+
 public class ArraysStrings {
 
     //Question 1.1: String with all unique characters
@@ -88,6 +90,21 @@ public class ArraysStrings {
             return oneInsert(str2, str1);
         else
             return false;
+    }
+
+    //New Question: Reverse string
+    String reverse(String str) {
+        Character[] arr = new Character[str.length()];
+        //Going to want to use a Stack, because stack is LIFO
+        Stack<Character> stack = new Stack();
+        for (char c : str.toCharArray()) {
+            stack.push(c);
+        }
+        for (int i = 0; i < stack.size(); i++) {
+            arr[i] = stack.pop();
+        }
+        String retStr = arr.toString();
+        return retStr;
     }
 
 }

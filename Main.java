@@ -22,9 +22,11 @@ public class Main {
 
 
         //1.5: One away
-        if (arrTest.oneEdit("f","d"))
-            System.out.println("yes");
-        else
-            System.out.println("no");
+//        if (arrTest.oneEdit("f","d"))
+//            System.out.println("yes");
+//        else
+//            System.out.println("no");
+
+        System.out.println(arrTest.reverse("33333939292920-1"));
     }
 }
