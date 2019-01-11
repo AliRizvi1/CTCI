@@ -106,7 +106,10 @@ public class ArraysStrings {
         String retStr = arr.toString();
         return retStr;
     }
+    //x^2 + y^2 + z^2 = 2019 where x,y, and z are prime numbers.
+    int[] twentyNineteen() {
+        return null;
+    }
 
 
 }
-    //x^2 + y^2 + z^2 = 2019 where x,y, and z are prime numbers.
