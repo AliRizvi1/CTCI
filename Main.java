@@ -1,4 +1,7 @@
 package com.company;
+import sun.awt.image.ImageWatched;
+
+import java.util.*;
 
 
 public class Main {
@@ -30,7 +33,19 @@ public class Main {
 //        System.out.println(arrTest.reverse("33333939292920-1"));
 
         //1.6: compressed
-        String compression = arrTest.compression("abcd");
+        String compression = arrTest.compression("aabbccddddd");
         System.out.println(compression);
+
+        //Testing queues and stacks
+        //Have to remember queue is new LinkedList, while stack is new Stack<>()
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(4);
+        System.out.println(queue.remove());
+        Stack<Integer> stack = new Stack<>();
+        stack.push(4);
+        System.out.println(stack.pop());
+
+
+
     }
 }
