@@ -27,6 +27,10 @@ public class Main {
 //        else
 //            System.out.println("no");
 
-        System.out.println(arrTest.reverse("33333939292920-1"));
+//        System.out.println(arrTest.reverse("33333939292920-1"));
+
+        //1.6: compressed
+        String compression = arrTest.compression("abcd");
+        System.out.println(compression);
     }
 }

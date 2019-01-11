@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class ArraysStrings {
@@ -106,6 +107,34 @@ public class ArraysStrings {
         String retStr = arr.toString();
         return retStr;
     }
+
+    //1.6: String compression
+    String compression(String str) {
+        StringBuilder compressed = new StringBuilder();
+        int count = 0;
+        char[] strArr = str.toCharArray();
+        for (int i = 0;i <= str.length() - 1; i++) {
+            if ((i == str.length() - 1)) {
+                count++;
+                compressed.append("" + strArr[i] + count);
+
+            }
+            else if (strArr[i] != strArr[i+1]) {
+                count++;
+                compressed.append("" + strArr[i] + count);
+                count = 0;
+            }
+            else if (strArr[i] == strArr[i+1]) {
+                count ++;
+            }
+        }
+        if (compressed.length() > str.length())
+            return str;
+        return compressed.toString();
+    }
+
+
+
     //x^2 + y^2 + z^2 = 2019 where x,y, and z are prime numbers.
     int[] twentyNineteen() {
         return null;
