@@ -3,7 +3,10 @@ import sun.awt.image.ImageWatched;
 
 import java.util.*;
 
+import static com.company.MathLogic.numberOfTokens;
 import static com.company.MyStack.sort;
+
+
 
 
 public class Main {
@@ -64,7 +67,18 @@ public class Main {
         stack.push(2);
         stack = sort(stack);
         System.out.println(stack.pop());
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(4);
+        arr.add(2);
+        for (int i = 0; i < arr.size(); i++)
+            System.out.println(arr.get(i));
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(n);
+        List<List<Integer>> commands = new ArrayList<>();
 
+        int x = numberOfTokens(4, commands);
+        System.out.println(x);
 
 
     }
