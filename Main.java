@@ -38,12 +38,20 @@ public class Main {
 
         //Testing queues and stacks
         //Have to remember queue is new LinkedList, while stack is new Stack<>()
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(4);
-        System.out.println(queue.remove());
-        Stack<Integer> stack = new Stack<>();
-        stack.push(4);
-        System.out.println(stack.pop());
+//        Queue<Integer> queue = new LinkedList<>();
+//        queue.add(4);
+//        System.out.println(queue.remove());
+//        Stack<Integer> stack = new Stack<>();
+//        stack.push(4);
+//        System.out.println(stack.pop());
+
+        //Question 3.2: Stacks and Queues
+        MyStack stack = new MyStack();
+        stack.push(90);
+        stack.push(12);
+        stack.push(24);
+        stack.push(88);
+        System.out.println(stack.min());
 
 
 
