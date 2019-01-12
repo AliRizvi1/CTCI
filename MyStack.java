@@ -46,4 +46,20 @@ public class MyStack {
     public int min() {
         return min;
     }
+
+    public static Stack<Integer> sort(Stack<Integer> inStack) {
+        Stack<Integer> stack = new Stack<>();
+        //Two while loops, O(n^2) time complexity, O(n) space complexity
+        //Pushes onto the input stack everything until the "stack" var has the sorted integers
+        while (!inStack.isEmpty()) {
+            int temp = inStack.pop();
+            while (!stack.isEmpty() && stack.peek() > temp) {
+                inStack.push(stack.pop());
+            }
+            stack.push(temp);
+        }
+
+        return stack;
+
+    }
 }

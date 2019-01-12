@@ -3,6 +3,8 @@ import sun.awt.image.ImageWatched;
 
 import java.util.*;
 
+import static com.company.MyStack.sort;
+
 
 public class Main {
 
@@ -46,12 +48,22 @@ public class Main {
 //        System.out.println(stack.pop());
 
         //Question 3.2: Stacks and Queues
-        MyStack stack = new MyStack();
-        stack.push(90);
-        stack.push(12);
-        stack.push(24);
-        stack.push(88);
-        System.out.println(stack.min());
+//        MyStack stack = new MyStack();
+//        stack.push(90);
+//        stack.push(12);
+//        stack.push(24);
+//        stack.push(88);
+//        System.out.println(stack.min());
+
+        //Question 3.5: sort algorithm for a stack, using a max of two stacks
+        Stack<Integer> stack = new Stack<>();
+        stack.push(4);
+        stack.push(21);
+        stack.push(1);
+        stack.push(8);
+        stack.push(2);
+        stack = sort(stack);
+        System.out.println(stack.pop());
 
 
 
