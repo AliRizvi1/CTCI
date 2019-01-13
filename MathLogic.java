@@ -70,4 +70,25 @@ public class MathLogic {
 
 
     }
+
+    static int minimumSwaps(int[] arr) {
+        int count = 0;
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == (i+1)) {
+                continue;
+            }
+            //want to swap arr[i] and arr[arr[i]-1]
+            //Was getting stuck bc arr[i] switched first, messing up arr[arr[i] - 1]
+            int temp = arr[arr[i]-1];
+            arr[arr[i]-1] = arr[i];
+            arr[i] = temp;
+            //arr[i] swapped with
+            count++;
+            i--;
+        }
+        System.out.println(count);
+        return count;
+
+    }
 }

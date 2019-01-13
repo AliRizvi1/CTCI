@@ -3,6 +3,7 @@ import sun.awt.image.ImageWatched;
 
 import java.util.*;
 
+import static com.company.MathLogic.minimumSwaps;
 import static com.company.MathLogic.numberOfTokens;
 import static com.company.MyStack.sort;
 
@@ -10,6 +11,7 @@ import static com.company.MyStack.sort;
 
 
 public class Main {
+
 
     public static void main(String[] args) {
 
@@ -38,8 +40,8 @@ public class Main {
 //        System.out.println(arrTest.reverse("33333939292920-1"));
 
         //1.6: compressed
-        String compression = arrTest.compression("aabbccddddd");
-        System.out.println(compression);
+//        String compression = arrTest.compression("aabbccddddd");
+//        System.out.println(compression);
 
         //Testing queues and stacks
         //Have to remember queue is new LinkedList, while stack is new Stack<>()
@@ -59,26 +61,30 @@ public class Main {
 //        System.out.println(stack.min());
 
         //Question 3.5: sort algorithm for a stack, using a max of two stacks
-        Stack<Integer> stack = new Stack<>();
-        stack.push(4);
-        stack.push(21);
-        stack.push(1);
-        stack.push(8);
-        stack.push(2);
-        stack = sort(stack);
-        System.out.println(stack.pop());
-        ArrayList<Integer> arr = new ArrayList<>();
-        arr.add(4);
-        arr.add(2);
-        for (int i = 0; i < arr.size(); i++)
-            System.out.println(arr.get(i));
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        System.out.println(n);
-        List<List<Integer>> commands = new ArrayList<>();
+//        Stack<Integer> stack = new Stack<>();
+//        stack.push(4);
+//        stack.push(21);
+//        stack.push(1);
+//        stack.push(8);
+//        stack.push(2);
+//        stack = sort(stack);
+//        System.out.println(stack.pop());
+//        ArrayList<Integer> arr = new ArrayList<>();
+//        arr.add(4);
+//        arr.add(2);
+//        for (int i = 0; i < arr.size(); i++)
+//            System.out.println(arr.get(i));
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//        System.out.println(n);
+//        List<List<Integer>> commands = new ArrayList<>();
+//
+//        int x = numberOfTokens(4, commands);
+//        System.out.println(x);
 
-        int x = numberOfTokens(4, commands);
-        System.out.println(x);
+        int[] arr = {4,3,1,2};
+        minimumSwaps(arr);
+
 
 
     }
