@@ -133,6 +133,32 @@ public class ArraysStrings {
         return compressed.toString();
     }
 
+    int binarySearch(int[] a, int x) {
+        /*a binary search to find a specific number in an array. Much faster than what I've been using
+        bubble sort, which has O(n^2) because of the embedded for loop
+        binary search runtime: O(logn)
+         */
+        int low = 0;
+        int high = a.length - 1;
+        int mid;
+        //{4,3,9,1,8,6), looking for 8. 8 is at index 5
+
+        while (low <= high) {
+            mid = (low + high) / 2;
+            if (a[mid] < x) {
+                low = mid + 1;
+            }
+            else if (a[mid] > x) {
+                high = mid - 1;
+            }
+            else
+                return mid;
+        }
+        return -1;
+    }
+
+    //Use merge sort for a sorting algorithm:
+
 
 
     //x^2 + y^2 + z^2 = 2019 where x,y, and z are prime numbers.

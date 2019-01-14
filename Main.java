@@ -82,8 +82,17 @@ public class Main {
 //        int x = numberOfTokens(4, commands);
 //        System.out.println(x);
 
-        int[] arr = {4,3,1,2};
-        minimumSwaps(arr);
+//        int[] arr = {4,3,1,2};
+//        minimumSwaps(arr);
+        Hashtable<Integer, String> employees = new Hashtable<>();
+        //Stores a hashvalue to represent 1
+        employees.put(1, "Bob");
+        employees.put(5, "Sam");
+
+        for (String item : employees.values()) {
+            System.out.println(item);
+        }
+
 
 
 
