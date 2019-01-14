@@ -3,6 +3,7 @@ import sun.awt.image.ImageWatched;
 
 import java.util.*;
 
+import static com.company.ArraysStrings.charBinarySearch;
 import static com.company.MathLogic.minimumSwaps;
 import static com.company.MathLogic.numberOfTokens;
 import static com.company.MyStack.sort;
@@ -92,6 +93,9 @@ public class Main {
         for (String item : employees.values()) {
             System.out.println(item);
         }
+        char[] c = {'b'};
+        char x = 'x';
+        System.out.println('a' < 'z');
 
 
 

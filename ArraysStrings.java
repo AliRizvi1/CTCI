@@ -1,7 +1,10 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
+import java.util.*;
 
 public class ArraysStrings {
 
@@ -133,7 +136,7 @@ public class ArraysStrings {
         return compressed.toString();
     }
 
-    int binarySearch(int[] a, int x) {
+    static int binarySearch(int[] a, int x) {
         /*a binary search to find a specific number in an array. Much faster than what I've been using
         bubble sort, which has O(n^2) because of the embedded for loop
         binary search runtime: O(logn)
@@ -156,6 +159,50 @@ public class ArraysStrings {
         }
         return -1;
     }
+
+    static int charBinarySearch(char[] c, char x) {
+        int low = (int) 'a';
+        int high = (int) 'z';
+        int mid;
+
+        while (low <= high) {
+            mid = (low + high) / 2;
+            if (c[mid] < x) {
+                low = mid + 1;
+            }
+            else if (c[mid] > x)
+                high = mid - 1;
+            else
+                return mid;
+        }
+        return -1;
+
+    }
+
+    static int makeAnagram(String a, String b) {
+        Map<Character, Integer> count = new HashMap<>();
+        //For every char in the first string, add +1 to the value at the key
+        //For every char in the second string, take -1 to the value of the key
+        //The letters that are the same will have a value of 0, all the other values will be the amount
+        //needed to delete
+        for (char c : a.toCharArray()) {
+            int ct = count.containsKey(c) ? count.get(c) : 0;
+            count.put(c,ct+1);
+        }
+        for (char c : b.toCharArray()) {
+            int ct = count.containsKey(c) ? count.get(c) : 0;
+            count.put(c,ct-1);
+
+        }
+        List<Integer> values = new ArrayList<>(count.values());
+        int total = 0;
+        for (int i : values) {
+            total += Math.abs(i);
+        }
+        return total;
+
+    }
+
 
     //Use merge sort for a sorting algorithm:
 
