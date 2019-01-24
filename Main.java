@@ -97,6 +97,15 @@ public class Main {
         char x = 'x';
         System.out.println('a' < 'z');
 
+        Hashtable<String, Character> table = new Hashtable<>();
+        String str = "flowers";
+        Character test = str.charAt(0);
+        System.out.println(test);
+
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(4);
+        System.out.println(arr.get(0));
+
 
 
 
